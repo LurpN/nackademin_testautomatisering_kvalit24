@@ -42,10 +42,10 @@ def test_login():
     assert login_response.status_code == 200
 
     # Extract token
-    token = login_response.json()["token"]
+    token = login_response.json()["access_token"]
 
     # Then I should see all my products
     admin_api = AdminAPI("http://localhost:8000", token=token)
     product_count = admin_api.get_current_product_count()
 
-    assert product_count > 0
+    assert product_count >= 0

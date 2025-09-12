@@ -10,7 +10,7 @@ class AdminPage:
         self.create_btn_createproduct = page.get_by_role(
             "button", name="Create Product"
         )
-        self.product_lists = page.locator(".product-grid")
+        self.product_lists = page.locator(".product-grid .product-item")
         self.logout_btn = page.get_by_role("button", name="Logout")
         self.empty_product_message = page.get_by_text("No products avalible.")
         self.delete_btn = page.get_by_role("button", name="Delete")
