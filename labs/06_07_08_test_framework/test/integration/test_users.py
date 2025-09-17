@@ -9,7 +9,7 @@ from models.api.admin import AdminAPI
 # Given I am a new potential customer​
 # When I signup in the app​
 # Then I should be able to log in with my new user
-def test_signup():
+def test_signup(page: Page):
     # Given I am a new potential customer​
     username = libs.utils.generate_string_with_prefix()
     password = "test_1234?"
@@ -30,7 +30,7 @@ def test_signup():
 # Then I should see all my products
 
 
-def test_login():
+def test_login(page: Page):
     # Given I am an authenticated user
     username = "admin"
     password = "admin"
